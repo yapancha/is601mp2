@@ -15,11 +15,11 @@ class PagesTest extends TestCase
      */
     public function testExample()
     {
-        $response = $this->get('/login');
+        $response = $this->get('/about');
 
         $response->assertStatus(200);
 
-        echo "\n\nLogin page sent code 200";
+        echo "\n\nAbout page sent code 200";
     }
 
 
