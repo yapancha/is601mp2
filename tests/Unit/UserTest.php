@@ -15,35 +15,41 @@ class UserTest extends TestCase
      *
      * @return void
      */
-//    public function testExample()
-//    {
-//        $user = new User();
-//
-//        $user->name = "Testname";
-//        $user->email = "testt@gmail.com";
-//        $user->password = "tetst";
-//
-//
-//
-//        $this->assertTrue($user->save());
-//        echo "User created!";
-//    }
-//
-//    public function testNameChange(){
-//
-//        $user = User::inRandomOrder()->first();;
-//        $this->assertTrue($user->update(['name'=>'Steve Smith']));
-//
-//        echo "\n\nName updated to Steve Smith";
-//    }
+    public function testExample()
+    {
 
-//      public function testUserDelition(){
-//
-//          $user = User::inRandomOrder()->first();;
-//          $this->assertTrue($user->delete());
-//          echo "\n\nRandom user deleted";
-//
-//      }
+        $user = new User();
 
+        $user->name = "Testname";
+        $user->email = "testt@gmail.com";
+        $user->password = "tetst";
+
+
+
+        $this->assertTrue($user->save());
+        echo "User created!";
+    }
+
+    public function testNameChange(){
+
+        $user = User::inRandomOrder()->first();;
+        $this->assertTrue($user->update(['name'=>'Steve Smith']));
+
+        echo "\n\nName updated to Steve Smith";
+    }
+
+      public function testUserDelition(){
+
+          $user = User::inRandomOrder()->first();;
+          $this->assertTrue($user->delete());
+          echo "\n\nRandom user deleted";
+
+      }
+
+public function testUserxx(){
+    $user = User::inRandomOrder()->first();
+    $this->assertInternalType("int", $user->id);
+    echo "YESSS";
+}
 
 }

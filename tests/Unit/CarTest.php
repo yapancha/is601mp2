@@ -2,6 +2,8 @@
 
 namespace Tests\Unit;
 
+use DemeterChain\C;
+use PhpParser\Node\Expr\Cast\Int_;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -17,6 +19,8 @@ class CarTest extends TestCase
      */
     public function testExample()
     {
+        Car::truncate();
+
         $car = new Car();
 
         $car->make = "Toyota";
@@ -39,11 +43,14 @@ class CarTest extends TestCase
 
       public function testCarDelition(){
 
-          $car = Car::inRandomOrder()->first();;
+          $car = Car::inRandomOrder()->first();
           $this->assertTrue($car->delete());
           echo "\n\n{$car} deleted";
 
+          $this->assertInternalType('int', $car->year);
+
       }
+
 
 
 }
