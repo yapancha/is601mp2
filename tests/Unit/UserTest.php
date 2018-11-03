@@ -37,11 +37,13 @@ class UserTest extends TestCase
 //        echo "\n\nName updated to Steve Smith";
 //    }
 
-      public function testUserDelition(){
+//      public function testUserDelition(){
+//
+//          $user = User::inRandomOrder()->first();;
+//          $this->assertTrue($user->delete());
+//          echo "\n\nRandom user deleted";
+//
+//      }
 
-          $user = User::inRandomOrder()->first();;
-          $this->assertTrue($user->delete());
-          echo "\n\nRandom user deleted";
 
-      }
 }
