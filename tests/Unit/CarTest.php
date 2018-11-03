@@ -37,13 +37,13 @@ class CarTest extends TestCase
         echo "\n\nCar Year updated to 2000";
     }
 
-//      public function testCarDelition(){
-//
-//          $car = Car::inRandomOrder()->first();;
-//          $this->assertTrue($car->delete());
-//          echo "\n\n{$car} deleted";
-//
-//      }
+      public function testCarDelition(){
+
+          $car = Car::inRandomOrder()->first();;
+          $this->assertTrue($car->delete());
+          echo "\n\n{$car} deleted";
+
+      }
 
 
 }
