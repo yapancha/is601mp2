@@ -19,7 +19,7 @@ class CarTest extends TestCase
      */
     public function testExample()
     {
-       // Car::truncate(); dd();
+       //Car::truncate(); dd();
         $car = new Car();
 
         $car->make = "Toyota";
