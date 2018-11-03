@@ -28,13 +28,20 @@ class UserTest extends TestCase
 //        $this->assertTrue($user->save());
 //        echo "User created!";
 //    }
+//
+//    public function testNameChange(){
+//
+//        $user = User::inRandomOrder()->first();;
+//        $this->assertTrue($user->update(['name'=>'Steve Smith']));
+//
+//        echo "\n\nName updated to Steve Smith";
+//    }
 
-    public function testExample(){
+      public function testUserDelition(){
 
-        $user = User::find(9);
-        $this->assertTrue($user->update(['name'=>'Steve Smith']));
+          $user = User::inRandomOrder()->first();;
+          $this->assertTrue($user->delete());
+          echo "\n\nRandom user deleted";
 
-
-        echo "\n\nName updated to Steve Smith";
-    }
+      }
 }
