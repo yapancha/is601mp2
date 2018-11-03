@@ -57,15 +57,15 @@ class CarTest extends TestCase
           $this->assertInternalType('string', $car->model);
           $this->assertContains($car->make, ['Honda','Toyota', 'Ford']);
       }
-//      public function testCarSeed(){
-//          $count  = Car::count();
-//          $this->seed('CarsTableSeeder');
-//          $new_count = Car::count();
-//
-//          $actual = $new_count - $count;
-//
-//          $this->assertEquals(50, $actual);
-//    }
+      public function testCarSeed(){
+          $count  = Car::count();
+          $this->seed('CarsTableSeeder');
+          $new_count = Car::count();
+
+          $actual = $new_count - $count;
+
+          $this->assertEquals(50, $actual);
+    }
 
 
 
