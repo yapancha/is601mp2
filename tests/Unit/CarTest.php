@@ -48,6 +48,7 @@ class CarTest extends TestCase
           echo "\n\n{$car} deleted";
 
           $this->assertInternalType('int', $car->year);
+          $this->assertInternalType('string', $car->model);
 
       }
 
