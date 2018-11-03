@@ -46,16 +46,16 @@ class UserTest extends TestCase
           echo "\n\nRandom user deleted";
 
       }
-//    public function testUserSeed(){
-//        $count  = User::count();
-//        $this->seed('UserTableSeeder');
-//
-//        $new_count = User::count();
-//
-//        $actual = $new_count - $count;
-//
-//        $this->assertEquals(50, $actual);
-//    }
+    public function testUserSeed(){
+        $count  = User::count();
+        $this->seed('UserTableSeeder');
+
+        $new_count = User::count();
+
+        $actual = $new_count - $count;
+
+        $this->assertEquals(50, $actual);
+    }
 
 
 
