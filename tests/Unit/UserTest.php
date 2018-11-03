@@ -17,6 +17,7 @@ class UserTest extends TestCase
      */
     public function testExample()
     {
+        //User::truncate(); dd();
 
         $user = new User();
 
@@ -45,11 +46,17 @@ class UserTest extends TestCase
           echo "\n\nRandom user deleted";
 
       }
+//    public function testUserSeed(){
+//        $count  = User::count();
+//        $this->seed('UserTableSeeder');
+//
+//        $new_count = User::count();
+//
+//        $actual = $new_count - $count;
+//
+//        $this->assertEquals(50, $actual);
+//    }
 
-public function testUserxx(){
-    $user = User::inRandomOrder()->first();
-    $this->assertInternalType("int", $user->id);
-    echo "YESSS";
-}
+
 
 }

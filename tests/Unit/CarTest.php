@@ -19,8 +19,7 @@ class CarTest extends TestCase
      */
     public function testExample()
     {
-        Car::truncate();
-
+       // Car::truncate(); dd();
         $car = new Car();
 
         $car->make = "Toyota";
@@ -47,10 +46,26 @@ class CarTest extends TestCase
           $this->assertTrue($car->delete());
           echo "\n\n{$car} deleted";
 
-          $this->assertInternalType('int', $car->year);
-          $this->assertInternalType('string', $car->model);
 
       }
+
+      public function testTypeCheck(){
+          $car = Car::inRandomOrder()->first();
+
+
+          $this->assertInternalType('string', $car->year);
+          $this->assertInternalType('string', $car->model);
+          $this->assertContains($car->make, ['Honda','Toyota', 'Ford']);
+      }
+//      public function testCarSeed(){
+//          $count  = Car::count();
+//          $this->seed('CarsTableSeeder');
+//          $new_count = Car::count();
+//
+//          $actual = $new_count - $count;
+//
+//          $this->assertEquals(50, $actual);
+//    }
 
 
 
