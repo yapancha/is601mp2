@@ -29,14 +29,14 @@ class CarTest extends TestCase
         echo "Car created!";
     }
 
-//    public function testNameChange(){
-//
-//        $car = Car::inRandomOrder()->first();;
-//        $this->assertTrue($car->update(['year'=>'2000']));
-//
-//        echo "\n\nCar Year updated to 2000";
-//    }
-//
+    public function testNameChange(){
+
+        $car = Car::inRandomOrder()->first();;
+        $this->assertTrue($car->update(['year'=>'2000']));
+
+        echo "\n\nCar Year updated to 2000";
+    }
+
 //      public function testCarDelition(){
 //
 //          $car = Car::inRandomOrder()->first();;
